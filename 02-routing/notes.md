@@ -9,11 +9,11 @@ def about():
     return "This is the about page."  
   
 ##Dynamic Route  
-@app.route("/user/<username>")  
+@app.route("/user/&lt;username&gt;")  
 def greet(username):  
     return f"Hello, {username}!"  
   
 ## Type-Specific Route  
-@app.route("/post/<int:post_id>")  
+@app.route("/post/&lt;int:post_id&gt;")  
 def show_post(post_id):  
     return f"Post ID: {post_id}"  
