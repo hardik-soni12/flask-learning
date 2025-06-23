@@ -1,4 +1,4 @@
-# Day 3 : HTML Templates in Flask  
+# Day 3 : HTML Templates in Flask.  
   
 ## Flask Template Engine:  
 Flask uses **Jinja2** templating engine to render dynamic HTML pages.  
@@ -12,3 +12,5 @@ Flask uses **Jinja2** templating engine to render dynamic HTML pages.
 ## Jinja2 Syntax (in HTML):  
 ▫️{{variable}} - for printing variables.  
 ▫️{%...%} - for logic like if/for statements.  
+  
+--  
