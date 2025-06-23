@@ -1,4 +1,4 @@
-#Day 1: Getting Startd with Flask  
+# Day 1: Getting Started with Flask  
   
 ## What is Flask?  
 Flask is a lightweight Python web framework used to build web applications.  
