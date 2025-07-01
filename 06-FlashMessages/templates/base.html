@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Base file{% endblock %}</title>
+    <style>
+        .asuccess {color: rgb(103, 132, 59);}
+        .danger {color: red;}
+
+        body{ font-family: Arial, Helvetica, sans-serif; padding: 20px;}
+
+        header { background-color: #333 ; padding: 10px; color: rgb(218, 230, 168); text-align: center;}
+
+        main {
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;     
+            align-items: center;         
+            min-height: 40vh;            
+            }
+
+
+        .center_box {
+            
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 300px;
+            }
+
+
+            
+        .login_button { font-weight: bold; color: aquamarine;
+             background-color: rgb(29, 188, 200); padding: 10px; border-radius: 15px;}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Hey welcome to my Flask Login Page.</h2>
+        <form  action="/login">
+            <button class="login_button" type="submit">Go to Login</button>
+        </form>
+
+        <hr>
+    </header>
+
+    <main>
+        <br>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div  class="{{ category }}">{{ message }}!!</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        {% block content %}{% endblock %}
+    </main>
+    
+</body>
+</html>

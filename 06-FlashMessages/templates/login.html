@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Login Page{% endblock %}
+
+{% block content %}
+    <div class="center_box">
+        <h2>Login</h1><br>
+
+        <form method="post" action="{{url_for('login')}}">
+            <label for="username">username :</label><br>
+            <input type="text" name="username" id="username" required><br><br>
+
+            <label for="password">password :</label><br>
+            <input type="password" name="password" id="password" required><br><br>
+
+            <input type="submit" style="width: 70px; font-size: 15px; " value="login">
+
+        </form>
+    </div>
+{% endblock %}
