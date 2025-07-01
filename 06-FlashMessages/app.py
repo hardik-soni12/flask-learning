@@ -18,7 +18,7 @@ def login():
         }
 
         if username in users and password == users[username]:
-            flash("Login Successful!!", "Success")
+            flash("Login Successful!!", "success")
             return render_template("dashboard.html", name = username.title())
         else:
             flash("invalid Username or Password", "danger")
