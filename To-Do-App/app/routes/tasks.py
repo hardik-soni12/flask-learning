@@ -55,6 +55,10 @@ def delete_task(task_id):
         flash('Unauthorized action.', 'danger')
         return redirect(url_for('task_bp.view_task'))
     
+    # delete logic
+    db.session.delete(task_to_delete)
+    db.session.commit()
+    return redirect(url_for('task_bp.view_task'))
 
 @task_bp.route('/clear', methods=['POST'])
 def clear_tasks():
